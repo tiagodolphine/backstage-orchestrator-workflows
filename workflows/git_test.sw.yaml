@@ -1,0 +1,20 @@
+id: git_test
+version: '0.1'
+specVersion: '0.8'
+name: Git name
+description: Git description
+start: StartState
+functions:
+  - name: uniqueFunctionName
+    operation: specs/actions-openapi.json#catalog:fetch
+states:
+  - name: StartState
+    type: operation
+    actions:
+      - name: uniqueActionName
+        functionRef:
+          refName: uniqueFunctionName
+          arguments:
+            entityRef: .entityRef
+    end: true
+dataInputSchema: schemas/git_test__main_schema.json

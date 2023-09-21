@@ -1,0 +1,12 @@
+{
+  "$id": "classpath:/schemas/git_test__main_schema.json",
+  "title": "git_test: Data Input Schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "git_test__sub_schema__StartState_uniqueActionName_uniqueFunctionName.json": {
+      "$ref": "git_test__sub_schema__StartState_uniqueActionName_uniqueFunctionName.json",
+      "type": "object"
+    }
+  }
+}
