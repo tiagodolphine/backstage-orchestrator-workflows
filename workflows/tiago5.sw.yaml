@@ -1,0 +1,20 @@
+id: tiago5
+version: '0.1'
+specVersion: '0.8'
+name: Workflow name
+description: Workflow description
+start: StartState
+functions:
+  - name: uniqueFunctionName
+    operation: specs/actions-openapi.json#catalog:fetch
+states:
+  - name: StartState
+    type: operation
+    actions:
+      - name: uniqueActionName
+        functionRef:
+          refName: uniqueFunctionName
+          arguments:
+            entityRef: .entityRef
+    end: true
+dataInputSchema: schemas/tiago5__main_schema.json
