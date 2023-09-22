@@ -1,0 +1,12 @@
+{
+  "$id": "classpath:/schemas/tiago8__main_schema.json",
+  "title": "tiago8: Data Input Schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "tiago8__sub_schema__StartState_uniqueActionName_uniqueFunctionName.json": {
+      "$ref": "tiago8__sub_schema__StartState_uniqueActionName_uniqueFunctionName.json",
+      "type": "object"
+    }
+  }
+}
