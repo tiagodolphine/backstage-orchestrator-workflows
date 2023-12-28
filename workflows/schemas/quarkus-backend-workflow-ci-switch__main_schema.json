@@ -1,7 +1,7 @@
 {
   "$id": "classpath:/schemas/quarkus-backend-workflow-ci-switch__main_schema.json",
   "title": "quarkus-backend-workflow-ci-switch: Data Input Schema",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
     "quarkus-backend-workflow-ci-switch__sub_schema__Generating_the_Source_Code_Component_Fetch_Template_Action_Source_Code_runActionTemplateFetch.json": {
