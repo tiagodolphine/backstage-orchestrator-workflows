@@ -1,0 +1,46 @@
+id: wait-or-error
+version: "1.0"
+specVersion: "0.8"
+name: Wait or Error
+description: Simple workflow to simulate waiting for callback or error
+dataInputSchema: schemas/wait-or-error__main-schema.json
+start: ChooseOnState
+events:
+  - name: callbackEvent
+    type: wait-or-error
+    source: wait-or-error
+functions:
+  - name: logFunction
+    type: custom
+    operation: sysout
+  - name: throwError
+    operation: specs/actions-openapi.json#unknown-action
+states:
+  - name: ChooseOnState
+    type: switch
+    dataConditions:
+      - condition: ${ .state == "Wait" }
+        transition: WaitTimeout
+      - condition: ${ .state == "Error" }
+        transition: ThrowError
+    defaultCondition:
+      transition: WaitTimeout
+  - name: WaitTimeout
+    type: callback
+    action:
+      name: logCallback
+      functionRef:
+        refName: logFunction
+        arguments:
+          message: Callback
+    eventRef: callbackEvent
+    timeouts:
+      eventTimeout: PT20S
+    end: true
+  - name: ThrowError
+    type: operation
+    actions:
+      - name: throwError
+        functionRef:
+          refName: throwError
+    end: true
