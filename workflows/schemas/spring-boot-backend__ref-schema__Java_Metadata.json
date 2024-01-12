@@ -1,0 +1,33 @@
+{
+  "$id": "classpath:/schemas/spring-boot-backend__ref-schema__Java_Metadata.json",
+  "title": "Provide information about the Java metadata",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "groupId": {
+      "title": "Group ID",
+      "description": "Maven Group ID eg (io.janus)",
+      "type": "string",
+      "default": "io.janus"
+    },
+    "artifactId": {
+      "title": "Artifact ID",
+      "description": "Maven Artifact ID",
+      "type": "string",
+      "default": "spring-boot-app"
+    },
+    "javaPackageName": {
+      "title": "Java Package Namespace",
+      "description": "Name for the Java Package (ensure to use the / character as this is used for folder structure) should match Group ID and Artifact ID",
+      "type": "string",
+      "default": "io/janus/spring-boot-app"
+    },
+    "version": {
+      "title": "Version",
+      "description": "Maven Artifact Version",
+      "type": "string",
+      "default": "1.0.0-SNAPSHOT"
+    }
+  },
+  "required": ["groupId", "artifactId", "javaPackageName", "version"]
+}

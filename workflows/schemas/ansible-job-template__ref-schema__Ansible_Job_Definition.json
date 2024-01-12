@@ -1,0 +1,48 @@
+{
+  "$id": "classpath:/schemas/ansible-job-template__ref-schema__Ansible_Job_Definition.json",
+  "title": "Ansible Job Definition",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name of the Ansible Job",
+      "description": "A unique name for the Ansible Job",
+      "type": "string"
+    },
+    "jobTemplate": {
+      "title": "Name of the Job Template to launch",
+      "description": "Specify a job template to launch",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "description": "Provide a description of the Job to be launched",
+      "type": "string"
+    },
+    "namespace": {
+      "title": "Namespace",
+      "description": "Specify the namespace to launch the job",
+      "type": "string",
+      "default": "aap"
+    },
+    "connectionSecret": {
+      "title": "Connection Secret",
+      "description": "Specify the connection secret to use for the job",
+      "type": "string",
+      "default": "aapaccess"
+    },
+    "extraVars": {
+      "title": "Extra Vars",
+      "description": "Specify any extra vars to pass to the job",
+      "type": "string",
+      "default": "{}"
+    }
+  },
+  "required": [
+    "name",
+    "jobTemplate",
+    "description",
+    "namespace",
+    "connectionSecret"
+  ]
+}

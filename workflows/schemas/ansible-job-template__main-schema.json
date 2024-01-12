@@ -1,0 +1,16 @@
+{
+  "$id": "classpath:/schemas/ansible-job-template__main-schema.json",
+  "title": "Data input schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "ansible-job-template__ref-schema__GitHub_Repository_Info.json": {
+      "$ref": "ansible-job-template__ref-schema__GitHub_Repository_Info.json",
+      "type": "object"
+    },
+    "ansible-job-template__ref-schema__Ansible_Job_Definition.json": {
+      "$ref": "ansible-job-template__ref-schema__Ansible_Job_Definition.json",
+      "type": "object"
+    }
+  }
+}

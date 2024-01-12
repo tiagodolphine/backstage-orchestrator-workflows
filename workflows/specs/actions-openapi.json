@@ -5,7 +5,6 @@
     "description": "Workflow Actions BS API",
     "version": "0.0.1"
   },
-  "servers": [{ "url": "http://host.docker.internal:7007/api/orchestrator" }],
   "paths": {
     "/actions/fetch:plain": {
       "post": {
@@ -16,7 +15,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/fetch_plain" }
+              "schema": {
+                "$ref": "#/components/schemas/fetch_plain"
+              }
             }
           }
         },
@@ -24,7 +25,11 @@
           "default": {
             "description": "Action fetch:plain response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -39,7 +44,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/fetch_plain_file" }
+              "schema": {
+                "$ref": "#/components/schemas/fetch_plain_file"
+              }
             }
           }
         },
@@ -47,7 +54,11 @@
           "default": {
             "description": "Action fetch:plain:file response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -62,7 +73,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/fetch_template" }
+              "schema": {
+                "$ref": "#/components/schemas/fetch_template"
+              }
             }
           }
         },
@@ -70,7 +83,11 @@
           "default": {
             "description": "Action fetch:template response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -85,7 +102,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/publish_gerrit" }
+              "schema": {
+                "$ref": "#/components/schemas/publish_gerrit"
+              }
             }
           }
         },
@@ -93,7 +112,11 @@
           "default": {
             "description": "Action publish:gerrit response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -108,7 +131,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/publish_gerrit_review" }
+              "schema": {
+                "$ref": "#/components/schemas/publish_gerrit_review"
+              }
             }
           }
         },
@@ -116,7 +141,11 @@
           "default": {
             "description": "Action publish:gerrit:review response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -131,7 +160,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/publish_github" }
+              "schema": {
+                "$ref": "#/components/schemas/publish_github"
+              }
             }
           }
         },
@@ -139,7 +170,11 @@
           "default": {
             "description": "Action publish:github response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -163,7 +198,11 @@
           "default": {
             "description": "Action publish:github:pull-request response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -178,7 +217,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/publish_gitlab" }
+              "schema": {
+                "$ref": "#/components/schemas/publish_gitlab"
+              }
             }
           }
         },
@@ -186,7 +227,11 @@
           "default": {
             "description": "Action publish:gitlab response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -210,7 +255,11 @@
           "default": {
             "description": "Action publish:gitlab:merge-request response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -225,7 +274,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/publish_bitbucket" }
+              "schema": {
+                "$ref": "#/components/schemas/publish_bitbucket"
+              }
             }
           }
         },
@@ -233,7 +284,11 @@
           "default": {
             "description": "Action publish:bitbucket response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -258,7 +313,11 @@
           "default": {
             "description": "Action publish:bitbucketCloud response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -283,7 +342,11 @@
           "default": {
             "description": "Action publish:bitbucketServer response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -307,7 +370,11 @@
           "default": {
             "description": "Action publish:bitbucketServer:pull-request response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -322,7 +389,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/publish_azure" }
+              "schema": {
+                "$ref": "#/components/schemas/publish_azure"
+              }
             }
           }
         },
@@ -330,7 +399,11 @@
           "default": {
             "description": "Action publish:azure response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -345,7 +418,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/debug_log" }
+              "schema": {
+                "$ref": "#/components/schemas/debug_log"
+              }
             }
           }
         },
@@ -353,7 +428,11 @@
           "default": {
             "description": "Action debug:log response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -368,7 +447,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/debug_wait" }
+              "schema": {
+                "$ref": "#/components/schemas/debug_wait"
+              }
             }
           }
         },
@@ -376,7 +457,11 @@
           "default": {
             "description": "Action debug:wait response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -391,7 +476,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/catalog_register" }
+              "schema": {
+                "$ref": "#/components/schemas/catalog_register"
+              }
             }
           }
         },
@@ -399,7 +486,11 @@
           "default": {
             "description": "Action catalog:register response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -414,7 +505,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/catalog_fetch" }
+              "schema": {
+                "$ref": "#/components/schemas/catalog_fetch"
+              }
             }
           }
         },
@@ -422,7 +515,11 @@
           "default": {
             "description": "Action catalog:fetch response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -437,7 +534,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/catalog_write" }
+              "schema": {
+                "$ref": "#/components/schemas/catalog_write"
+              }
             }
           }
         },
@@ -445,7 +544,11 @@
           "default": {
             "description": "Action catalog:write response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -460,7 +563,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/fs_delete" }
+              "schema": {
+                "$ref": "#/components/schemas/fs_delete"
+              }
             }
           }
         },
@@ -468,7 +573,11 @@
           "default": {
             "description": "Action fs:delete response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -483,7 +592,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/fs_rename" }
+              "schema": {
+                "$ref": "#/components/schemas/fs_rename"
+              }
             }
           }
         },
@@ -491,7 +602,11 @@
           "default": {
             "description": "Action fs:rename response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -516,7 +631,11 @@
           "default": {
             "description": "Action github:actions:dispatch response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -531,7 +650,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/github_webhook" }
+              "schema": {
+                "$ref": "#/components/schemas/github_webhook"
+              }
             }
           }
         },
@@ -539,7 +660,11 @@
           "default": {
             "description": "Action github:webhook response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -554,7 +679,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/github_issues_label" }
+              "schema": {
+                "$ref": "#/components/schemas/github_issues_label"
+              }
             }
           }
         },
@@ -562,7 +689,11 @@
           "default": {
             "description": "Action github:issues:label response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -577,7 +708,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/github_repo_create" }
+              "schema": {
+                "$ref": "#/components/schemas/github_repo_create"
+              }
             }
           }
         },
@@ -585,7 +718,11 @@
           "default": {
             "description": "Action github:repo:create response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -600,7 +737,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/github_repo_push" }
+              "schema": {
+                "$ref": "#/components/schemas/github_repo_push"
+              }
             }
           }
         },
@@ -608,7 +747,11 @@
           "default": {
             "description": "Action github:repo:push response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -633,7 +776,11 @@
           "default": {
             "description": "Action github:environment:create response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -658,7 +805,11 @@
           "default": {
             "description": "Action github:deployKey:create response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -682,7 +833,11 @@
           "default": {
             "description": "Action confluence:transform:markdown response",
             "content": {
-              "application/json": { "schema": { "type": "object" } }
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           }
         }
@@ -693,7 +848,9 @@
     "schemas": {
       "fetch_plain": {
         "type": "object",
-        "required": ["url"],
+        "required": [
+          "url"
+        ],
         "properties": {
           "url": {
             "title": "Fetch URL",
@@ -709,7 +866,10 @@
       },
       "fetch_plain_file": {
         "type": "object",
-        "required": ["url", "targetPath"],
+        "required": [
+          "url",
+          "targetPath"
+        ],
         "properties": {
           "url": {
             "title": "Fetch URL",
@@ -725,7 +885,9 @@
       },
       "fetch_template": {
         "type": "object",
-        "required": ["url"],
+        "required": [
+          "url"
+        ],
         "properties": {
           "url": {
             "title": "Fetch URL",
@@ -746,13 +908,17 @@
             "title": "[Deprecated] Copy Without Render",
             "description": "An array of glob patterns. Any files or directories which match are copied without being processed as templates.",
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "copyWithoutTemplating": {
             "title": "Copy Without Templating",
             "description": "An array of glob patterns. Contents of matched files or directories are copied without being processed, but paths are subject to rendering.",
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "cookiecutterCompat": {
             "title": "Cookiecutter compatibility mode",
@@ -773,9 +939,14 @@
       },
       "publish_gerrit": {
         "type": "object",
-        "required": ["repoUrl"],
+        "required": [
+          "repoUrl"
+        ],
         "properties": {
-          "repoUrl": { "title": "Repository Location", "type": "string" },
+          "repoUrl": {
+            "title": "Repository Location",
+            "type": "string"
+          },
           "description": {
             "title": "Repository Description",
             "type": "string"
@@ -809,9 +980,15 @@
       },
       "publish_gerrit_review": {
         "type": "object",
-        "required": ["repoUrl", "gitCommitMessage"],
+        "required": [
+          "repoUrl",
+          "gitCommitMessage"
+        ],
         "properties": {
-          "repoUrl": { "title": "Repository Location", "type": "string" },
+          "repoUrl": {
+            "title": "Repository Location",
+            "type": "string"
+          },
           "branch": {
             "title": "Repository branch",
             "type": "string",
@@ -841,7 +1018,9 @@
       },
       "publish_github": {
         "type": "object",
-        "required": ["repoUrl"],
+        "required": [
+          "repoUrl"
+        ],
         "properties": {
           "repoUrl": {
             "title": "Repository Location",
@@ -852,7 +1031,10 @@
             "title": "Repository Description",
             "type": "string"
           },
-          "homepage": { "title": "Repository Homepage", "type": "string" },
+          "homepage": {
+            "title": "Repository Homepage",
+            "type": "string"
+          },
           "access": {
             "title": "Repository Access",
             "description": "Sets an admin collaborator on the repository. Can either be a user reference different from 'owner' in 'repoUrl' or team reference, eg. 'org/team-name'",
@@ -864,9 +1046,24 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "apps": { "type": "array", "items": { "type": "string" } },
-              "users": { "type": "array", "items": { "type": "string" } },
-              "teams": { "type": "array", "items": { "type": "string" } }
+              "apps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "teams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
             }
           },
           "requiredApprovingReviewCount": {
@@ -880,9 +1077,24 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "apps": { "type": "array", "items": { "type": "string" } },
-              "users": { "type": "array", "items": { "type": "string" } },
-              "teams": { "type": "array", "items": { "type": "string" } }
+              "apps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "teams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
             }
           },
           "requireCodeOwnerReviews": {
@@ -899,7 +1111,9 @@
             "title": "Required Status Check Contexts",
             "description": "The list of status checks to require in order to merge into this branch",
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "requireBranchesToBeUpToDate": {
             "title": "Require Branches To Be Up To Date?",
@@ -914,7 +1128,11 @@
           "repoVisibility": {
             "title": "Repository Visibility",
             "type": "string",
-            "enum": ["private", "public", "internal"]
+            "enum": [
+              "private",
+              "public",
+              "internal"
+            ]
           },
           "defaultBranch": {
             "title": "Default Branch",
@@ -963,12 +1181,19 @@
           },
           "squashMergeCommitTitle": {
             "title": "Default squash merge commit title",
-            "enum": ["PR_TITLE", "COMMIT_OR_PR_TITLE"],
+            "enum": [
+              "PR_TITLE",
+              "COMMIT_OR_PR_TITLE"
+            ],
             "description": "Sets the default value for a squash merge commit title. The default value is 'COMMIT_OR_PR_TITLE'"
           },
           "squashMergeCommitMessage": {
             "title": "Default squash merge commit message",
-            "enum": ["PR_BODY", "COMMIT_MESSAGES", "BLANK"],
+            "enum": [
+              "PR_BODY",
+              "COMMIT_MESSAGES",
+              "BLANK"
+            ],
             "description": "Sets the default value for a squash merge commit message. The default value is 'COMMIT_MESSAGES'"
           },
           "allowRebaseMerge": {
@@ -993,7 +1218,9 @@
             "items": {
               "type": "object",
               "additionalProperties": false,
-              "required": ["access"],
+              "required": [
+                "access"
+              ],
               "properties": {
                 "access": {
                   "type": "string",
@@ -1033,7 +1260,9 @@
           "topics": {
             "title": "Topics",
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "repoVariables": {
             "title": "Repository Variables",
@@ -1053,7 +1282,12 @@
         }
       },
       "publish_github_pull-request": {
-        "required": ["repoUrl", "title", "description", "branchName"],
+        "required": [
+          "repoUrl",
+          "title",
+          "description",
+          "branchName"
+        ],
         "type": "object",
         "properties": {
           "repoUrl": {
@@ -1104,13 +1338,17 @@
           "reviewers": {
             "title": "Pull Request Reviewers",
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "description": "The users that will be added as reviewers to the pull request"
           },
           "teamReviewers": {
             "title": "Pull Request Team Reviewers",
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "description": "The teams that will be added as reviewers to the pull request"
           },
           "commitMessage": {
@@ -1122,7 +1360,9 @@
       },
       "publish_gitlab": {
         "type": "object",
-        "required": ["repoUrl"],
+        "required": [
+          "repoUrl"
+        ],
         "properties": {
           "repoUrl": {
             "title": "Repository Location",
@@ -1132,7 +1372,11 @@
           "repoVisibility": {
             "title": "Repository Visibility",
             "type": "string",
-            "enum": ["private", "public", "internal"]
+            "enum": [
+              "private",
+              "public",
+              "internal"
+            ]
           },
           "defaultBranch": {
             "title": "Default Branch",
@@ -1173,12 +1417,17 @@
             "title": "Topic labels",
             "description": "Topic labels to apply on the repository.",
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
       "publish_gitlab_merge-request": {
-        "required": ["repoUrl", "branchName"],
+        "required": [
+          "repoUrl",
+          "branchName"
+        ],
         "type": "object",
         "properties": {
           "repoUrl": {
@@ -1229,7 +1478,11 @@
           "commitAction": {
             "title": "Commit action",
             "type": "string",
-            "enum": ["create", "update", "delete"],
+            "enum": [
+              "create",
+              "update",
+              "delete"
+            ],
             "description": "The action to be used for git commit. Defaults to create."
           },
           "removeSourceBranch": {
@@ -1246,9 +1499,14 @@
       },
       "publish_bitbucket": {
         "type": "object",
-        "required": ["repoUrl"],
+        "required": [
+          "repoUrl"
+        ],
         "properties": {
-          "repoUrl": { "title": "Repository Location", "type": "string" },
+          "repoUrl": {
+            "title": "Repository Location",
+            "type": "string"
+          },
           "description": {
             "title": "Repository Description",
             "type": "string"
@@ -1256,7 +1514,10 @@
           "repoVisibility": {
             "title": "Repository Visibility",
             "type": "string",
-            "enum": ["private", "public"]
+            "enum": [
+              "private",
+              "public"
+            ]
           },
           "defaultBranch": {
             "title": "Default Branch",
@@ -1297,9 +1558,14 @@
       },
       "publish_bitbucketCloud": {
         "type": "object",
-        "required": ["repoUrl"],
+        "required": [
+          "repoUrl"
+        ],
         "properties": {
-          "repoUrl": { "title": "Repository Location", "type": "string" },
+          "repoUrl": {
+            "title": "Repository Location",
+            "type": "string"
+          },
           "description": {
             "title": "Repository Description",
             "type": "string"
@@ -1307,7 +1573,10 @@
           "repoVisibility": {
             "title": "Repository Visibility",
             "type": "string",
-            "enum": ["private", "public"]
+            "enum": [
+              "private",
+              "public"
+            ]
           },
           "defaultBranch": {
             "title": "Default Branch",
@@ -1328,9 +1597,14 @@
       },
       "publish_bitbucketServer": {
         "type": "object",
-        "required": ["repoUrl"],
+        "required": [
+          "repoUrl"
+        ],
         "properties": {
-          "repoUrl": { "title": "Repository Location", "type": "string" },
+          "repoUrl": {
+            "title": "Repository Location",
+            "type": "string"
+          },
           "description": {
             "title": "Repository Description",
             "type": "string"
@@ -1338,7 +1612,10 @@
           "repoVisibility": {
             "title": "Repository Visibility",
             "type": "string",
-            "enum": ["private", "public"]
+            "enum": [
+              "private",
+              "public"
+            ]
           },
           "defaultBranch": {
             "title": "Default Branch",
@@ -1379,9 +1656,16 @@
       },
       "publish_bitbucketServer_pull-request": {
         "type": "object",
-        "required": ["repoUrl", "title", "sourceBranch"],
+        "required": [
+          "repoUrl",
+          "title",
+          "sourceBranch"
+        ],
         "properties": {
-          "repoUrl": { "title": "Repository Location", "type": "string" },
+          "repoUrl": {
+            "title": "Repository Location",
+            "type": "string"
+          },
           "title": {
             "title": "Pull Request title",
             "type": "string",
@@ -1411,9 +1695,14 @@
       },
       "publish_azure": {
         "type": "object",
-        "required": ["repoUrl"],
+        "required": [
+          "repoUrl"
+        ],
         "properties": {
-          "repoUrl": { "title": "Repository Location", "type": "string" },
+          "repoUrl": {
+            "title": "Repository Location",
+            "type": "string"
+          },
           "description": {
             "title": "Repository Description",
             "type": "string"
@@ -1453,12 +1742,17 @@
       "debug_log": {
         "type": "object",
         "properties": {
-          "message": { "title": "Message to output.", "type": "string" },
+          "message": {
+            "title": "Message to output.",
+            "type": "string"
+          },
           "listWorkspace": {
             "title": "List all files in the workspace, if true.",
             "type": "boolean"
           },
-          "extra": { "title": "Extra info" }
+          "extra": {
+            "title": "Extra info"
+          }
         }
       },
       "debug_wait": {
@@ -1482,7 +1776,9 @@
         "oneOf": [
           {
             "type": "object",
-            "required": ["catalogInfoUrl"],
+            "required": [
+              "catalogInfoUrl"
+            ],
             "properties": {
               "catalogInfoUrl": {
                 "title": "Catalog Info URL",
@@ -1498,7 +1794,9 @@
           },
           {
             "type": "object",
-            "required": ["repoContentsUrl"],
+            "required": [
+              "repoContentsUrl"
+            ],
             "properties": {
               "repoContentsUrl": {
                 "title": "Repository Contents URL",
@@ -1528,7 +1826,9 @@
           },
           "entityRefs": {
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "description": "Entity references of the entities to get"
           },
           "optional": {
@@ -1559,23 +1859,31 @@
             "description": "You can provide the same values used in the Entity schema."
           }
         },
-        "required": ["entity"],
+        "required": [
+          "entity"
+        ],
         "additionalProperties": false
       },
       "fs_delete": {
-        "required": ["files"],
+        "required": [
+          "files"
+        ],
         "type": "object",
         "properties": {
           "files": {
             "title": "Files",
             "description": "A list of files and directories that will be deleted",
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
       "fs_rename": {
-        "required": ["files"],
+        "required": [
+          "files"
+        ],
         "type": "object",
         "properties": {
           "files": {
@@ -1584,7 +1892,10 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["from", "to"],
+              "required": [
+                "from",
+                "to"
+              ],
               "properties": {
                 "from": {
                   "type": "string",
@@ -1605,7 +1916,11 @@
       },
       "github_actions_dispatch": {
         "type": "object",
-        "required": ["repoUrl", "workflowId", "branchOrTagName"],
+        "required": [
+          "repoUrl",
+          "workflowId",
+          "branchOrTagName"
+        ],
         "properties": {
           "repoUrl": {
             "title": "Repository Location",
@@ -1636,7 +1951,10 @@
       },
       "github_webhook": {
         "type": "object",
-        "required": ["repoUrl", "webhookUrl"],
+        "required": [
+          "repoUrl",
+          "webhookUrl"
+        ],
         "properties": {
           "repoUrl": {
             "title": "Repository Location",
@@ -1666,7 +1984,10 @@
           "contentType": {
             "title": "Content Type",
             "type": "string",
-            "enum": ["form", "json"],
+            "enum": [
+              "form",
+              "json"
+            ],
             "description": "The media type used to serialize the payloads. The default is 'form'"
           },
           "insecureSsl": {
@@ -1683,7 +2004,11 @@
       },
       "github_issues_label": {
         "type": "object",
-        "required": ["repoUrl", "number", "labels"],
+        "required": [
+          "repoUrl",
+          "number",
+          "labels"
+        ],
         "properties": {
           "repoUrl": {
             "title": "Repository Location",
@@ -1699,7 +2024,9 @@
             "title": "Labels",
             "description": "The labels to add to the pull request or issue",
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "token": {
             "title": "Authentication Token",
@@ -1710,7 +2037,9 @@
       },
       "github_repo_create": {
         "type": "object",
-        "required": ["repoUrl"],
+        "required": [
+          "repoUrl"
+        ],
         "properties": {
           "repoUrl": {
             "title": "Repository Location",
@@ -1721,7 +2050,10 @@
             "title": "Repository Description",
             "type": "string"
           },
-          "homepage": { "title": "Repository Homepage", "type": "string" },
+          "homepage": {
+            "title": "Repository Homepage",
+            "type": "string"
+          },
           "access": {
             "title": "Repository Access",
             "description": "Sets an admin collaborator on the repository. Can either be a user reference different from 'owner' in 'repoUrl' or team reference, eg. 'org/team-name'",
@@ -1738,9 +2070,24 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "apps": { "type": "array", "items": { "type": "string" } },
-              "users": { "type": "array", "items": { "type": "string" } },
-              "teams": { "type": "array", "items": { "type": "string" } }
+              "apps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "teams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
             }
           },
           "requiredApprovingReviewCount": {
@@ -1754,16 +2101,33 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "apps": { "type": "array", "items": { "type": "string" } },
-              "users": { "type": "array", "items": { "type": "string" } },
-              "teams": { "type": "array", "items": { "type": "string" } }
+              "apps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "teams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
             }
           },
           "requiredStatusCheckContexts": {
             "title": "Required Status Check Contexts",
             "description": "The list of status checks to require in order to merge into this branch",
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "requireBranchesToBeUpToDate": {
             "title": "Require Branches To Be Up To Date?",
@@ -1778,7 +2142,11 @@
           "repoVisibility": {
             "title": "Repository Visibility",
             "type": "string",
-            "enum": ["private", "public", "internal"]
+            "enum": [
+              "private",
+              "public",
+              "internal"
+            ]
           },
           "deleteBranchOnMerge": {
             "title": "Delete Branch On Merge",
@@ -1797,12 +2165,19 @@
           },
           "squashMergeCommitTitle": {
             "title": "Default squash merge commit title",
-            "enum": ["PR_TITLE", "COMMIT_OR_PR_TITLE"],
+            "enum": [
+              "PR_TITLE",
+              "COMMIT_OR_PR_TITLE"
+            ],
             "description": "Sets the default value for a squash merge commit title. The default value is 'COMMIT_OR_PR_TITLE'"
           },
           "squashMergeCommitMessage": {
             "title": "Default squash merge commit message",
-            "enum": ["PR_BODY", "COMMIT_MESSAGES", "BLANK"],
+            "enum": [
+              "PR_BODY",
+              "COMMIT_MESSAGES",
+              "BLANK"
+            ],
             "description": "Sets the default value for a squash merge commit message. The default value is 'COMMIT_MESSAGES'"
           },
           "allowRebaseMerge": {
@@ -1822,7 +2197,9 @@
             "items": {
               "type": "object",
               "additionalProperties": false,
-              "required": ["access"],
+              "required": [
+                "access"
+              ],
               "properties": {
                 "access": {
                   "type": "string",
@@ -1862,7 +2239,9 @@
           "topics": {
             "title": "Topics",
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "repoVariables": {
             "title": "Repository Variables",
@@ -1883,7 +2262,9 @@
       },
       "github_repo_push": {
         "type": "object",
-        "required": ["repoUrl"],
+        "required": [
+          "repoUrl"
+        ],
         "properties": {
           "repoUrl": {
             "title": "Repository Location",
@@ -1904,7 +2285,9 @@
             "title": "Required Status Check Contexts",
             "description": "The list of status checks to require in order to merge into this branch",
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "bypassPullRequestAllowances": {
             "title": "Bypass pull request requirements",
@@ -1912,9 +2295,24 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "apps": { "type": "array", "items": { "type": "string" } },
-              "users": { "type": "array", "items": { "type": "string" } },
-              "teams": { "type": "array", "items": { "type": "string" } }
+              "apps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "teams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
             }
           },
           "requiredApprovingReviewCount": {
@@ -1928,9 +2326,24 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "apps": { "type": "array", "items": { "type": "string" } },
-              "users": { "type": "array", "items": { "type": "string" } },
-              "teams": { "type": "array", "items": { "type": "string" } }
+              "apps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "teams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
             }
           },
           "requireBranchesToBeUpToDate": {
@@ -1992,7 +2405,10 @@
       },
       "github_environment_create": {
         "type": "object",
-        "required": ["repoUrl", "name"],
+        "required": [
+          "repoUrl",
+          "name"
+        ],
         "properties": {
           "repoUrl": {
             "title": "Repository Location",
@@ -2008,7 +2424,10 @@
             "title": "Deployment Branch Policy",
             "description": "The type of deployment branch policy for this environment. To allow all branches to deploy, set to null.",
             "type": "object",
-            "required": ["protected_branches", "custom_branch_policies"],
+            "required": [
+              "protected_branches",
+              "custom_branch_policies"
+            ],
             "properties": {
               "protected_branches": {
                 "title": "Protected Branches",
@@ -2026,7 +2445,9 @@
             "title": "Custom Branch Policy Name",
             "description": "The name pattern that branches must match in order to deploy to the environment.\n\n            Wildcard characters will not match /. For example, to match branches that begin with release/ and contain an additional single slash, use release/*/*. For more information about pattern matching syntax, see the Ruby File.fnmatch documentation.",
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "environmentVariables": {
             "title": "Environment Variables",
@@ -2047,7 +2468,12 @@
       },
       "github_deployKey_create": {
         "type": "object",
-        "required": ["repoUrl", "publicKey", "privateKey", "deployKeyName"],
+        "required": [
+          "repoUrl",
+          "publicKey",
+          "privateKey",
+          "deployKeyName"
+        ],
         "properties": {
           "repoUrl": {
             "title": "Repository Location",
@@ -2087,7 +2513,10 @@
             "type": "array",
             "title": "Confluence URL",
             "description": "Paste your Confluence url. Ensure it follows this format: https://{confluence+base+url}/display/{spacekey}/{page+title} or https://{confluence+base+url}/spaces/{spacekey}/pages/1234567/{page+title} for Confluence Cloud",
-            "items": { "type": "string", "default": "Confluence URL" }
+            "items": {
+              "type": "string",
+              "default": "Confluence URL"
+            }
           },
           "repoUrl": {
             "type": "string",

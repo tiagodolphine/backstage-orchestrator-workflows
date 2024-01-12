@@ -3,7 +3,7 @@ version: '1.0'
 specVersion: '0.8'
 name: Greeting workflow
 description: YAML based greeting workflow
-dataInputSchema: schemas/yamlgreet__main_schema.json
+dataInputSchema: schemas/yamlgreet__main-schema.json
 start: ChooseOnLanguage
 functions:
   - name: greetFunction

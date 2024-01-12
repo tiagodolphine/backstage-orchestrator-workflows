@@ -1,0 +1,16 @@
+{
+  "$id": "classpath:/schemas/nodejs-backend__main-schema.json",
+  "title": "Data input schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "nodejs-backend__ref-schema__New_Component.json": {
+      "$ref": "nodejs-backend__ref-schema__New_Component.json",
+      "type": "object"
+    },
+    "nodejs-backend__ref-schema__CI_Method.json": {
+      "$ref": "nodejs-backend__ref-schema__CI_Method.json",
+      "type": "object"
+    }
+  }
+}

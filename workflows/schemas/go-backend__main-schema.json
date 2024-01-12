@@ -1,0 +1,16 @@
+{
+  "$id": "classpath:/schemas/go-backend__main-schema.json",
+  "title": "Data input schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "go-backend__ref-schema__New_Component.json": {
+      "$ref": "go-backend__ref-schema__New_Component.json",
+      "type": "object"
+    },
+    "go-backend__ref-schema__CI_Method.json": {
+      "$ref": "go-backend__ref-schema__CI_Method.json",
+      "type": "object"
+    }
+  }
+}
