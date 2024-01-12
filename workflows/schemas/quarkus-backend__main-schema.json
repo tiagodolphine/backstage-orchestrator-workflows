@@ -1,0 +1,20 @@
+{
+  "$id": "classpath:/schemas/quarkus-backend__main-schema.json",
+  "title": "Data input schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "quarkus-backend__ref-schema__New_Component.json": {
+      "$ref": "quarkus-backend__ref-schema__New_Component.json",
+      "type": "object"
+    },
+    "quarkus-backend__ref-schema__Java_Metadata.json": {
+      "$ref": "quarkus-backend__ref-schema__Java_Metadata.json",
+      "type": "object"
+    },
+    "quarkus-backend__ref-schema__CI_Method.json": {
+      "$ref": "quarkus-backend__ref-schema__CI_Method.json",
+      "type": "object"
+    }
+  }
+}

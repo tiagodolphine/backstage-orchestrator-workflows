@@ -1,0 +1,46 @@
+{
+  "$id": "classpath:/schemas/go-backend__ref-schema__New_Component.json",
+  "title": "Provide information about the new component",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "orgName": {
+      "title": "Organization Name",
+      "description": "Organization name",
+      "type": "string"
+    },
+    "repoName": {
+      "title": "Repository Name",
+      "description": "GitHub repository name",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "description": "Help others understand what this component is for",
+      "type": "string"
+    },
+    "owner": {
+      "title": "Owner",
+      "description": "An entity from the catalog",
+      "type": "string"
+    },
+    "system": {
+      "title": "System",
+      "description": "An entity from the catalog",
+      "type": "string"
+    },
+    "port": {
+      "title": "Port",
+      "description": "Override the port exposed for the application",
+      "type": "number",
+      "default": 8080
+    }
+  },
+  "required": [
+    "orgName",
+    "repoName",
+    "owner",
+    "system",
+    "port"
+  ]
+}
