@@ -1,0 +1,24 @@
+{
+  "id": "assessment",
+  "version": "1.0",
+  "specVersion": "0.8",
+  "name": "Assessment Workflow",
+  "description": "Simple workflow to simulate assessment",
+  "annotations": ["workflow-type/assessment"],
+  "dataInputSchema": "schemas/assessment__main-schema.json",
+  "start": "Inject options",
+  "states": [
+    {
+      "name": "Inject options",
+      "type": "inject",
+      "data": {
+        "workflowOptions": [
+          { "id": "yamlgreet", "name": "Greeting workflow" },
+          { "id": "wait-or-error", "name": "Wait or Error" },
+          { "id": "hello_world", "name": "Hello World Workflow" }
+        ]
+      },
+      "end": true
+    }
+  ]
+}

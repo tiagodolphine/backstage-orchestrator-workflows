@@ -1,0 +1,21 @@
+{
+  "$id": "classpath:/schemas/assessment__main-schema.json",
+  "title": "Data Input Schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "description": "Name of the person to match with Greeting workflow",
+      "type": "string",
+      "default": "John Doe"
+    },
+    "state": {
+      "title": "State",
+      "description": "State of the workflow to match with Wait or Error workflow",
+      "enum": ["Wait", "Error"],
+      "default": "Wait"
+    }
+  },
+  "required": ["name", "state"]
+}
