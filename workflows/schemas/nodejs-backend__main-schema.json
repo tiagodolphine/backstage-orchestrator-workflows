@@ -4,13 +4,14 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
-    "nodejs-backend__ref-schema__New_Component.json": {
+    "newComponent": {
       "$ref": "nodejs-backend__ref-schema__New_Component.json",
       "type": "object"
     },
-    "nodejs-backend__ref-schema__CI_Method.json": {
+    "ciMethod": {
       "$ref": "nodejs-backend__ref-schema__CI_Method.json",
       "type": "object"
     }
-  }
+  },
+  "required": ["newComponent", "ciMethod"]
 }
