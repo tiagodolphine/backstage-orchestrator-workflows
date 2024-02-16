@@ -30,7 +30,7 @@ states:
           refName: runActionFetchTemplate
           arguments:
             url: >-
-              https://github.com/janus-idp/software-templates/tree/main/templates/github/nodejs-backend/skeleton
+              https://github.com/redhat-developer/red-hat-developer-hub-software-templates/tree/main/templates/github/nodejs-backend/skeleton
             values:
               orgName: .newComponent.orgName
               repoName: .newComponent.repoName
@@ -67,7 +67,7 @@ states:
           refName: runActionFetchTemplate
           arguments:
             url: >-
-              https://github.com/janus-idp/software-templates/tree/main/skeletons/github-actions
+              https://github.com/redhat-developer/red-hat-developer-hub-software-templates/tree/main/skeletons/github-actions
             copyWithoutTemplating:
               - '".github/workflows/"'
             values:
@@ -97,7 +97,7 @@ states:
           refName: runActionFetchTemplate
           arguments:
             url: >-
-              https://github.com/janus-idp/software-templates/tree/main/skeletons/tekton
+              https://github.com/redhat-developer/red-hat-developer-hub-software-templates/tree/main/skeletons/tekton
             copyWithoutTemplating:
               - '".github/workflows/"'
             values:
@@ -129,7 +129,7 @@ states:
           refName: runActionFetchTemplate
           arguments:
             url: >-
-              https://github.com/janus-idp/software-templates/tree/main/skeletons/catalog-info
+              https://github.com/redhat-developer/red-hat-developer-hub-software-templates/tree/main/skeletons/catalog-info
             values:
               orgName: .newComponent.orgName
               repoName: .newComponent.repoName

@@ -7,8 +7,8 @@ dataInputSchema: schemas/ansible-job-template__main-schema.json
 functions:
   - name: runActionFetchTemplate
     operation: specs/actions-openapi.json#fetch:template
-  - name: runActionGitHubRepoPush
-    operation: specs/actions-openapi.json#github:repo:push
+  - name: runActionPublishGithubPullRequest
+    operation: specs/actions-openapi.json#publish:github:pull-request
   - name: runActionCatalogRegister
     operation: specs/actions-openapi.json#catalog:register
   - name: fs:delete
@@ -32,7 +32,7 @@ states:
               arguments:
                 id: $WORKFLOW.instanceId
                 url: >-
-                  https://github.com/janus-idp/software-templates/tree/main/templates/github/launch-ansible-job/skeleton
+                  https://github.com/redhat-developer/red-hat-developer-hub-software-templates/tree/main/templates/github/launch-ansible-job/skeleton
                 values:
                   name: ${.ansibleJobDefinition.name}
                   jobTemplate: ${.ansibleJobDefinition.jobTemplate}
@@ -48,7 +48,7 @@ states:
               arguments:
                 id: $WORKFLOW.instanceId
                 url: >-
-                  https://github.com/janus-idp/software-templates/tree/main/skeletons/catalog-info
+                  https://github.com/redhat-developer/red-hat-developer-hub-software-templates/tree/main/skeletons/catalog-info
                 values:
                   githubOrg: ${.repositoryInfo.githubOrg}
                   repoName: ${.repositoryInfo.repoName}
@@ -64,18 +64,17 @@ states:
     type: operation
     actionMode: sequential
     actions:
-      - name: Publish Github
+      - name: Publish Github Pull Request
         functionRef:
-          refName: runActionGitHubRepoPush
+          refName: runActionPublishGithubPullRequest
           arguments:
             id: $WORKFLOW.instanceId
-            title: '.ansibleJobDefinition.name + "-job"'
-            description: Workflow Action
+            title: .ansibleJobDefinition.name + "-job"
+            allowedHosts:
+              - '"github.com"'
+            description: .ansibleJobDefinition.name + "-job"
             repoUrl: '"github.com?owner=" + .repositoryInfo.githubOrg + "&repo=" + .repositoryInfo.repoName'
-            defaultBranch: main
-            gitCommitMessage: Initial commit
-            protectDefaultBranch: false
-            protectEnforceAdmins: false
+            branchName: .ansibleJobDefinition.name + "-job"
         actionDataFilter:
           results: .actionPublishResult
     onErrors:
@@ -92,8 +91,9 @@ states:
           refName: runActionCatalogRegister
           arguments:
             id: $WORKFLOW.instanceId
-            repoContentsUrl: .actionPublishResult.repoContentsUrl
+            repoContentsUrl: '"https://github.com/" + .repositoryInfo.githubOrg + "/" + .repositoryInfo.repoName + "/blob/" + .actionPublishResult.targetBranchName'
             catalogInfoPath: '"/catalog-info.yaml"'
+            optional: true
         actionDataFilter:
           toStateData: .actionCatalogRegisterResult
     onErrors:
