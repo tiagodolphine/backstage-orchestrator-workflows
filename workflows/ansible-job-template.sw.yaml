@@ -34,13 +34,13 @@ states:
                 url: >-
                   https://github.com/janus-idp/software-templates/tree/main/templates/github/launch-ansible-job/skeleton
                 values:
-                  name: ${.name}
-                  jobTemplate: ${.jobTemplate}
-                  component_id: ${.name}
-                  namespace: ${.namespace}
-                  connection_secret: ${.connectionSecret}
-                  description: ${.description}
-                  extra_vars: ${.extraVars}
+                  name: ${.ansibleJobDefinition.name}
+                  jobTemplate: ${.ansibleJobDefinition.jobTemplate}
+                  component_id: ${.ansibleJobDefinition.name}
+                  namespace: ${.ansibleJobDefinition.namespace}
+                  connection_secret: ${.ansibleJobDefinition.connectionSecret}
+                  description: ${.ansibleJobDefinition.description}
+                  extra_vars: ${.ansibleJobDefinition.extraVars}
       - name: Generating the Catalog Info Component
         actions:
           - functionRef:
@@ -50,11 +50,11 @@ states:
                 url: >-
                   https://github.com/janus-idp/software-templates/tree/main/skeletons/catalog-info
                 values:
-                  githubOrg: ${.githubOrg}
-                  repoName: ${.repoName}
-                  owner: ${.owner}
+                  githubOrg: ${.repositoryInfo.githubOrg}
+                  repoName: ${.repositoryInfo.repoName}
+                  owner: ${.repositoryInfo.owner}
                   applicationType: api
-                  description: ${.description}
+                  description: ${.ansibleJobDefinition.description}
     onErrors:
       - errorRef: Error on Action
         transition: Handle Error
@@ -69,9 +69,9 @@ states:
           refName: runActionGitHubRepoPush
           arguments:
             id: $WORKFLOW.instanceId
-            title: '.name + "-job"'
+            title: '.ansibleJobDefinition.name + "-job"'
             description: Workflow Action
-            repoUrl: '"github.com?owner=" + .githubOrg + "&repo=" + .repoName'
+            repoUrl: '"github.com?owner=" + .repositoryInfo.githubOrg + "&repo=" + .repositoryInfo.repoName'
             defaultBranch: main
             gitCommitMessage: Initial commit
             protectDefaultBranch: false

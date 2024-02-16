@@ -32,15 +32,15 @@ states:
             url: >-
               https://github.com/janus-idp/software-templates/tree/main/templates/github/nodejs-backend/skeleton
             values:
-              orgName: .orgName
-              repoName: .repoName
-              owner: .owner
-              system: .system
+              orgName: .newComponent.orgName
+              repoName: .newComponent.repoName
+              owner: .newComponent.owner
+              system: .newComponent.system
               applicationType: api
-              description: .description
-              namespace: .namespace
-              port: .port
-              ci: .ci
+              description: .newComponent.description
+              namespace: .ciMethod.namespace
+              port: .newComponent.port
+              ci: .ciMethod.ci
               sourceControl: github.com
         actionDataFilter:
           toStateData: .actionFetchTemplateSourceCodeResult
@@ -52,9 +52,9 @@ states:
   - name: Generating the CI Component
     type: switch
     dataConditions:
-      - condition: ${ .ci == "github" }
+      - condition: ${ .ciMethod.ci == "github" }
         transition: Generating the CI Component - GitHub
-      - condition: ${ .ci == "tekton" }
+      - condition: ${ .ciMethod.ci == "tekton" }
         transition: Generating the CI Component - Tekton
     defaultCondition:
       transition: Generating the CI Component - GitHub
@@ -71,15 +71,15 @@ states:
             copyWithoutTemplating:
               - '".github/workflows/"'
             values:
-              orgName: .orgName
-              repoName: .repoName
-              owner: .owner
-              system: .system
+              orgName: .newComponent.orgName
+              repoName: .newComponent.repoName
+              owner: .newComponent.owner
+              system: .newComponent.system
               applicationType: api
-              description: .description
-              namespace: .namespace
-              port: .port
-              ci: .ci
+              description: .newComponent.description
+              namespace: .ciMethod.namespace
+              port: .newComponent.port
+              ci: .ciMethod.ci
               sourceControl: github.com
         actionDataFilter:
           toStateData: .actionTemplateFetchCIResult
@@ -101,18 +101,18 @@ states:
             copyWithoutTemplating:
               - '".github/workflows/"'
             values:
-              orgName: .orgName
-              repoName: .repoName
-              owner: .owner
-              system: .system
+              orgName: .newComponent.orgName
+              repoName: .newComponent.repoName
+              owner: .newComponent.owner
+              system: .newComponent.system
               applicationType: api
-              description: .description
-              namespace: .namespace
-              imageUrl: .imageUrl
-              imageRepository: .imageRepository
-              imageBuilder: s2i-nodejs
-              port: .port
-              ci: .ci
+              description: .newComponent.description
+              namespace: .ciMethod.namespace
+              imageUrl: .ciMethod.imageUrl
+              imageRepository: .ciMethod.imageRepository
+              imageBuilder: s2i-go
+              port: .newComponent.port
+              ci: .ciMethod.ci
               sourceControl: github.com
         actionDataFilter:
           toStateData: .actionTemplateFetchCIResult
@@ -131,18 +131,18 @@ states:
             url: >-
               https://github.com/janus-idp/software-templates/tree/main/skeletons/catalog-info
             values:
-              orgName: .orgName
-              repoName: .repoName
-              owner: .owner
-              system: .system
+              orgName: .newComponent.orgName
+              repoName: .newComponent.repoName
+              owner: .newComponent.owner
+              system: .newComponent.system
               applicationType: api
-              description: .description
-              namespace: .namespace
-              imageUrl: imageUrl
-              imageRepository: .imageRepository
-              imageBuilder: s2i-nodejs
-              port: .port
-              ci: .ci
+              description: .newComponent.description
+              namespace: .ciMethod.namespace
+              imageUrl: .ciMethod.imageUrl
+              imageRepository: .ciMethod.imageRepository
+              imageBuilder: s2i-go
+              port: .newComponent.port
+              ci: .ciMethod.ci
               sourceControl: github.com
         actionDataFilter:
           toStateData: .actionFetchTemplateCatalogInfoResult
@@ -162,7 +162,7 @@ states:
             allowedHosts:
               - '"github.com"'
             description: Workflow Action
-            repoUrl: '"github.com?owner=" + .orgName + "&repo=" + .repoName'
+            repoUrl: '"github.com?owner=" + .newComponent.orgName + "&repo=" + .newComponent.repoName'
             defaultBranch: main
             gitCommitMessage: Initial commit
             allowAutoMerge: true

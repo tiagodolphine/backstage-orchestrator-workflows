@@ -4,17 +4,18 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
-    "quarkus-backend__ref-schema__New_Component.json": {
+    "newComponent": {
       "$ref": "quarkus-backend__ref-schema__New_Component.json",
       "type": "object"
     },
-    "quarkus-backend__ref-schema__Java_Metadata.json": {
+    "javaMetadata": {
       "$ref": "quarkus-backend__ref-schema__Java_Metadata.json",
       "type": "object"
     },
-    "quarkus-backend__ref-schema__CI_Method.json": {
+    "ciMethod": {
       "$ref": "quarkus-backend__ref-schema__CI_Method.json",
       "type": "object"
     }
-  }
+  },
+  "required": ["newComponent", "javaMetadata", "ciMethod"]
 }
